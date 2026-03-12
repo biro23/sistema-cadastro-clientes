@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+</head>
+<body>
+
+  <h1>Cadastro de Clientes</h1>
+
+  <p id="produtoEscolhido"></p>
+
+  <form action="/salvar" method="POST">
+      <input type="text" name="nome" placeholder="Nome"><br>
+      <input type="text" name="email" placeholder="Email"><br>
+      <input type="text" name="telefone" placeholder="Telefone"><br>
+
+
+      <input type="hidden" name="produto" id="produto"><br>
+
+      <button type="submit">Salvar</button>
+  </form>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const produto = params.get("produto");
+
+    document.getElementById("produto").value = produto;
+    document.getElementById("produtoEscolhido").innerText = "produto: " + produto;
+  </script>
+  
+</body>
+</html>
