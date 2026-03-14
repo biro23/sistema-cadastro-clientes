@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Sistema rodando no Vercel 🚀"
+    return "Sistema funcionando no Vercel 🚀"
 
-def handler(request):
-    return app(request.environ, lambda status, headers: None)
+# isto é obrigatório para o Vercel
+app = app
