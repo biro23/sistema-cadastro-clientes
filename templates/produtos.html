@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +11,28 @@
       padding: 10px;
       color: blueviolet;
     }
-
-
-
   </style>
 
 </head>
+
 <body>
 
-  <h1>Escolha um Produto</h1>
+<h1>Escolha um Produto</h1>
 
-  <div>
-  <button onclick="IrParaCadastro('Notebook')">Notebook</button><br>
-  <button onclick="IrParaCadastro('Celular')">Celular</button><br>
-  <button onclick="IrParaCadastro('Tablet')">Tablet</button><br>
-  <button onclick="IrParaCadastro('Oculos')">Óculos de Sol</button><br>
-  </div>
+<div>
+<button onclick="IrParaCadastro('Notebook')">Notebook</button><br>
+<button onclick="IrParaCadastro('Celular')">Celular</button><br>
+<button onclick="IrParaCadastro('Tablet')">Tablet</button><br>
+<button onclick="IrParaCadastro('Oculos')">Óculos de Sol</button><br>
+</div>
 
+<script>
 
-  <script>
-    function IrParaCadastro(produto){
-      window.location.href = "/cadastro/=" + produto
-    }
-  </script>
+function IrParaCadastro(produto){
+  window.location.href = "/cadastro/" + produto
+}
 
+</script>
 
-
-  
 </body>
 </html>

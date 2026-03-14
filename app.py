@@ -11,19 +11,17 @@ conexao = mysql.connector.connect(
     database="sistema_clientes"
 )
 
-# abrir tela de produtos
+# tela de produtos
 @app.route('/')
 def produtos():
     return render_template('produtos.html')
 
-
-# abrir tela de cadastro
+# tela de cadastro
 @app.route('/cadastro/<produto>')
 def cadastro(produto):
     return render_template('index.html', produto=produto)
 
-
-# salvar cliente no banco
+# salvar cliente
 @app.route('/salvar', methods=['POST'])
 def salvar():
 
@@ -38,11 +36,9 @@ def salvar():
     valores = (nome,email,telefone,produto)
 
     cursor.execute(sql,valores)
-
     conexao.commit()
 
     return "Cliente salvo com sucesso!"
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
